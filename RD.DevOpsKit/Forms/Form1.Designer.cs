@@ -32,6 +32,8 @@
             tpMain = new TabPage();
             tpDiff = new TabPage();
             tpBase64Coder = new TabPage();
+            tpJsonPrettyPrint = new TabPage();
+            tpKubernetes = new TabPage();
             lblWatermark = new Label();
             lblVer = new Label();
             pbRedStar = new PictureBox();
@@ -44,14 +46,25 @@
             quitToolStripMenuItem = new ToolStripMenuItem();
             toolsToolStripMenuItem = new ToolStripMenuItem();
             tsmiTextDiff = new ToolStripMenuItem();
+            tsmiJson = new ToolStripMenuItem();
             tsmiB64 = new ToolStripMenuItem();
             encodeTextToB64ToolStripMenuItem = new ToolStripMenuItem();
             decodeB64ToTextToolStripMenuItem = new ToolStripMenuItem();
-            tsmiJson = new ToolStripMenuItem();
             tsmiKubernetes = new ToolStripMenuItem();
             generateSimpleYAMLManifestToolStripMenuItem = new ToolStripMenuItem();
             yAMLManifestVerifierToolStripMenuItem = new ToolStripMenuItem();
             validateSecretsToolStripMenuItem = new ToolStripMenuItem();
+            tsmiSystem = new ToolStripMenuItem();
+            statsToolStripMenuItem1 = new ToolStripMenuItem();
+            checkResourcesToolStripMenuItem = new ToolStripMenuItem();
+            lockingPCManipulatorToolStripMenuItem = new ToolStripMenuItem();
+            tsmiNetwork = new ToolStripMenuItem();
+            statsToolStripMenuItem = new ToolStripMenuItem();
+            checkConnectionToolStripMenuItem = new ToolStripMenuItem();
+            redClientToolStripMenuItem = new ToolStripMenuItem();
+            gETToolStripMenuItem = new ToolStripMenuItem();
+            pUTToolStripMenuItem = new ToolStripMenuItem();
+            pOSTToolStripMenuItem = new ToolStripMenuItem();
             gitHubToolStripMenuItem = new ToolStripMenuItem();
             sourceCodeToolStripMenuItem = new ToolStripMenuItem();
             wikiToolStripMenuItem = new ToolStripMenuItem();
@@ -63,24 +76,12 @@
             docsToolStripMenuItem = new ToolStripMenuItem();
             viewGitHubWikiToolStripMenuItem = new ToolStripMenuItem();
             cToolStripMenuItem = new ToolStripMenuItem();
-            reportABugToolStripMenuItem = new ToolStripMenuItem();
-            requestAFeatureToolStripMenuItem = new ToolStripMenuItem();
             aboutToolStripMenuItem = new ToolStripMenuItem();
             rDDevOpsKitToolStripMenuItem = new ToolStripMenuItem();
             buildInfoToolStripMenuItem = new ToolStripMenuItem();
-            tpJsonPrettyPrint = new TabPage();
-            tpKubernetes = new TabPage();
-            tsmiNetwork = new ToolStripMenuItem();
-            statsToolStripMenuItem = new ToolStripMenuItem();
-            checkConnectionToolStripMenuItem = new ToolStripMenuItem();
-            tsmiSystem = new ToolStripMenuItem();
-            statsToolStripMenuItem1 = new ToolStripMenuItem();
-            checkResourcesToolStripMenuItem = new ToolStripMenuItem();
-            lockingPCManipulatorToolStripMenuItem = new ToolStripMenuItem();
-            redClientToolStripMenuItem = new ToolStripMenuItem();
-            gETToolStripMenuItem = new ToolStripMenuItem();
-            pUTToolStripMenuItem = new ToolStripMenuItem();
-            pOSTToolStripMenuItem = new ToolStripMenuItem();
+            reportABugToolStripMenuItem1 = new ToolStripMenuItem();
+            requestAFeatureToolStripMenuItem1 = new ToolStripMenuItem();
+            gNUGPLv3ToolStripMenuItem = new ToolStripMenuItem();
             tabControlMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbRedStar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbKoFi).BeginInit();
@@ -130,6 +131,24 @@
             tpBase64Coder.TabIndex = 2;
             tpBase64Coder.Text = "Base64";
             tpBase64Coder.UseVisualStyleBackColor = true;
+            // 
+            // tpJsonPrettyPrint
+            // 
+            tpJsonPrettyPrint.Location = new Point(4, 24);
+            tpJsonPrettyPrint.Name = "tpJsonPrettyPrint";
+            tpJsonPrettyPrint.Size = new Size(892, 542);
+            tpJsonPrettyPrint.TabIndex = 3;
+            tpJsonPrettyPrint.Text = "JSON Pretty Print";
+            tpJsonPrettyPrint.UseVisualStyleBackColor = true;
+            // 
+            // tpKubernetes
+            // 
+            tpKubernetes.Location = new Point(4, 24);
+            tpKubernetes.Name = "tpKubernetes";
+            tpKubernetes.Size = new Size(892, 542);
+            tpKubernetes.TabIndex = 4;
+            tpKubernetes.Text = "Kubernetes (K8s)";
+            tpKubernetes.UseVisualStyleBackColor = true;
             // 
             // lblWatermark
             // 
@@ -236,14 +255,20 @@
             // tsmiTextDiff
             // 
             tsmiTextDiff.Name = "tsmiTextDiff";
-            tsmiTextDiff.Size = new Size(180, 22);
+            tsmiTextDiff.Size = new Size(164, 22);
             tsmiTextDiff.Text = "Text Diff";
+            // 
+            // tsmiJson
+            // 
+            tsmiJson.Name = "tsmiJson";
+            tsmiJson.Size = new Size(164, 22);
+            tsmiJson.Text = "JSON Pretty Print";
             // 
             // tsmiB64
             // 
             tsmiB64.DropDownItems.AddRange(new ToolStripItem[] { encodeTextToB64ToolStripMenuItem, decodeB64ToTextToolStripMenuItem });
             tsmiB64.Name = "tsmiB64";
-            tsmiB64.Size = new Size(180, 22);
+            tsmiB64.Size = new Size(164, 22);
             tsmiB64.Text = "Base64...";
             // 
             // encodeTextToB64ToolStripMenuItem
@@ -258,17 +283,11 @@
             decodeB64ToTextToolStripMenuItem.Size = new Size(173, 22);
             decodeB64ToTextToolStripMenuItem.Text = "Decode B64 to text";
             // 
-            // tsmiJson
-            // 
-            tsmiJson.Name = "tsmiJson";
-            tsmiJson.Size = new Size(180, 22);
-            tsmiJson.Text = "JSON Pretty Print";
-            // 
             // tsmiKubernetes
             // 
             tsmiKubernetes.DropDownItems.AddRange(new ToolStripItem[] { generateSimpleYAMLManifestToolStripMenuItem, yAMLManifestVerifierToolStripMenuItem, validateSecretsToolStripMenuItem });
             tsmiKubernetes.Name = "tsmiKubernetes";
-            tsmiKubernetes.Size = new Size(180, 22);
+            tsmiKubernetes.Size = new Size(164, 22);
             tsmiKubernetes.Text = "Kubernetes (K8s)";
             // 
             // generateSimpleYAMLManifestToolStripMenuItem
@@ -288,6 +307,75 @@
             validateSecretsToolStripMenuItem.Name = "validateSecretsToolStripMenuItem";
             validateSecretsToolStripMenuItem.Size = new Size(242, 22);
             validateSecretsToolStripMenuItem.Text = "Validate Secrets";
+            // 
+            // tsmiSystem
+            // 
+            tsmiSystem.DropDownItems.AddRange(new ToolStripItem[] { statsToolStripMenuItem1, checkResourcesToolStripMenuItem, lockingPCManipulatorToolStripMenuItem });
+            tsmiSystem.Name = "tsmiSystem";
+            tsmiSystem.Size = new Size(164, 22);
+            tsmiSystem.Text = "System";
+            // 
+            // statsToolStripMenuItem1
+            // 
+            statsToolStripMenuItem1.Name = "statsToolStripMenuItem1";
+            statsToolStripMenuItem1.Size = new Size(202, 22);
+            statsToolStripMenuItem1.Text = "Stats";
+            // 
+            // checkResourcesToolStripMenuItem
+            // 
+            checkResourcesToolStripMenuItem.Name = "checkResourcesToolStripMenuItem";
+            checkResourcesToolStripMenuItem.Size = new Size(202, 22);
+            checkResourcesToolStripMenuItem.Text = "Check resources";
+            // 
+            // lockingPCManipulatorToolStripMenuItem
+            // 
+            lockingPCManipulatorToolStripMenuItem.Name = "lockingPCManipulatorToolStripMenuItem";
+            lockingPCManipulatorToolStripMenuItem.Size = new Size(202, 22);
+            lockingPCManipulatorToolStripMenuItem.Text = "Locking PC manipulator";
+            // 
+            // tsmiNetwork
+            // 
+            tsmiNetwork.DropDownItems.AddRange(new ToolStripItem[] { statsToolStripMenuItem, checkConnectionToolStripMenuItem, redClientToolStripMenuItem });
+            tsmiNetwork.Name = "tsmiNetwork";
+            tsmiNetwork.Size = new Size(164, 22);
+            tsmiNetwork.Text = "Network";
+            // 
+            // statsToolStripMenuItem
+            // 
+            statsToolStripMenuItem.Name = "statsToolStripMenuItem";
+            statsToolStripMenuItem.Size = new Size(170, 22);
+            statsToolStripMenuItem.Text = "Stats";
+            // 
+            // checkConnectionToolStripMenuItem
+            // 
+            checkConnectionToolStripMenuItem.Name = "checkConnectionToolStripMenuItem";
+            checkConnectionToolStripMenuItem.Size = new Size(170, 22);
+            checkConnectionToolStripMenuItem.Text = "Check connection";
+            // 
+            // redClientToolStripMenuItem
+            // 
+            redClientToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { gETToolStripMenuItem, pUTToolStripMenuItem, pOSTToolStripMenuItem });
+            redClientToolStripMenuItem.Name = "redClientToolStripMenuItem";
+            redClientToolStripMenuItem.Size = new Size(170, 22);
+            redClientToolStripMenuItem.Text = "RedClient";
+            // 
+            // gETToolStripMenuItem
+            // 
+            gETToolStripMenuItem.Name = "gETToolStripMenuItem";
+            gETToolStripMenuItem.Size = new Size(102, 22);
+            gETToolStripMenuItem.Text = "GET";
+            // 
+            // pUTToolStripMenuItem
+            // 
+            pUTToolStripMenuItem.Name = "pUTToolStripMenuItem";
+            pUTToolStripMenuItem.Size = new Size(102, 22);
+            pUTToolStripMenuItem.Text = "PUT";
+            // 
+            // pOSTToolStripMenuItem
+            // 
+            pOSTToolStripMenuItem.Name = "pOSTToolStripMenuItem";
+            pOSTToolStripMenuItem.Size = new Size(102, 22);
+            pOSTToolStripMenuItem.Text = "POST";
             // 
             // gitHubToolStripMenuItem
             // 
@@ -324,12 +412,12 @@
             // donateToolStripMenuItem
             // 
             donateToolStripMenuItem.Name = "donateToolStripMenuItem";
-            donateToolStripMenuItem.Size = new Size(121, 22);
+            donateToolStripMenuItem.Size = new Size(180, 22);
             donateToolStripMenuItem.Text = "Donate...";
             // 
             // helpToolStripMenuItem
             // 
-            helpToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { whatsThisToolStripMenuItem, docsToolStripMenuItem, cToolStripMenuItem, reportABugToolStripMenuItem, requestAFeatureToolStripMenuItem });
+            helpToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { whatsThisToolStripMenuItem, docsToolStripMenuItem, cToolStripMenuItem });
             helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             helpToolStripMenuItem.Size = new Size(44, 20);
             helpToolStripMenuItem.Text = "Help";
@@ -337,43 +425,32 @@
             // whatsThisToolStripMenuItem
             // 
             whatsThisToolStripMenuItem.Name = "whatsThisToolStripMenuItem";
-            whatsThisToolStripMenuItem.Size = new Size(174, 22);
+            whatsThisToolStripMenuItem.Size = new Size(180, 22);
             whatsThisToolStripMenuItem.Text = "What's this?";
             // 
             // docsToolStripMenuItem
             // 
             docsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { viewGitHubWikiToolStripMenuItem });
             docsToolStripMenuItem.Name = "docsToolStripMenuItem";
-            docsToolStripMenuItem.Size = new Size(174, 22);
+            docsToolStripMenuItem.Size = new Size(180, 22);
             docsToolStripMenuItem.Text = "Docs";
             // 
             // viewGitHubWikiToolStripMenuItem
             // 
             viewGitHubWikiToolStripMenuItem.Name = "viewGitHubWikiToolStripMenuItem";
-            viewGitHubWikiToolStripMenuItem.Size = new Size(166, 22);
+            viewGitHubWikiToolStripMenuItem.Size = new Size(180, 22);
             viewGitHubWikiToolStripMenuItem.Text = "View GitHub Wiki";
             // 
             // cToolStripMenuItem
             // 
+            cToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { reportABugToolStripMenuItem1, requestAFeatureToolStripMenuItem1 });
             cToolStripMenuItem.Name = "cToolStripMenuItem";
-            cToolStripMenuItem.Size = new Size(174, 22);
+            cToolStripMenuItem.Size = new Size(180, 22);
             cToolStripMenuItem.Text = "Contribute";
-            // 
-            // reportABugToolStripMenuItem
-            // 
-            reportABugToolStripMenuItem.Name = "reportABugToolStripMenuItem";
-            reportABugToolStripMenuItem.Size = new Size(174, 22);
-            reportABugToolStripMenuItem.Text = "Report a bug...";
-            // 
-            // requestAFeatureToolStripMenuItem
-            // 
-            requestAFeatureToolStripMenuItem.Name = "requestAFeatureToolStripMenuItem";
-            requestAFeatureToolStripMenuItem.Size = new Size(174, 22);
-            requestAFeatureToolStripMenuItem.Text = "Request a feature...";
             // 
             // aboutToolStripMenuItem
             // 
-            aboutToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { rDDevOpsKitToolStripMenuItem, buildInfoToolStripMenuItem });
+            aboutToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { rDDevOpsKitToolStripMenuItem, buildInfoToolStripMenuItem, gNUGPLv3ToolStripMenuItem });
             aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             aboutToolStripMenuItem.Size = new Size(61, 20);
             aboutToolStripMenuItem.Text = "About...";
@@ -381,101 +458,32 @@
             // rDDevOpsKitToolStripMenuItem
             // 
             rDDevOpsKitToolStripMenuItem.Name = "rDDevOpsKitToolStripMenuItem";
-            rDDevOpsKitToolStripMenuItem.Size = new Size(147, 22);
+            rDDevOpsKitToolStripMenuItem.Size = new Size(180, 22);
             rDDevOpsKitToolStripMenuItem.Text = "RD DevOpsKit";
             // 
             // buildInfoToolStripMenuItem
             // 
             buildInfoToolStripMenuItem.Name = "buildInfoToolStripMenuItem";
-            buildInfoToolStripMenuItem.Size = new Size(147, 22);
+            buildInfoToolStripMenuItem.Size = new Size(180, 22);
             buildInfoToolStripMenuItem.Text = "Build info";
             // 
-            // tpJsonPrettyPrint
+            // reportABugToolStripMenuItem1
             // 
-            tpJsonPrettyPrint.Location = new Point(4, 24);
-            tpJsonPrettyPrint.Name = "tpJsonPrettyPrint";
-            tpJsonPrettyPrint.Size = new Size(892, 542);
-            tpJsonPrettyPrint.TabIndex = 3;
-            tpJsonPrettyPrint.Text = "JSON Pretty Print";
-            tpJsonPrettyPrint.UseVisualStyleBackColor = true;
+            reportABugToolStripMenuItem1.Name = "reportABugToolStripMenuItem1";
+            reportABugToolStripMenuItem1.Size = new Size(180, 22);
+            reportABugToolStripMenuItem1.Text = "Report a bug...";
             // 
-            // tpKubernetes
+            // requestAFeatureToolStripMenuItem1
             // 
-            tpKubernetes.Location = new Point(4, 24);
-            tpKubernetes.Name = "tpKubernetes";
-            tpKubernetes.Size = new Size(892, 542);
-            tpKubernetes.TabIndex = 4;
-            tpKubernetes.Text = "Kubernetes (K8s)";
-            tpKubernetes.UseVisualStyleBackColor = true;
+            requestAFeatureToolStripMenuItem1.Name = "requestAFeatureToolStripMenuItem1";
+            requestAFeatureToolStripMenuItem1.Size = new Size(180, 22);
+            requestAFeatureToolStripMenuItem1.Text = "Request a feature...";
             // 
-            // tsmiNetwork
+            // gNUGPLv3ToolStripMenuItem
             // 
-            tsmiNetwork.DropDownItems.AddRange(new ToolStripItem[] { statsToolStripMenuItem, checkConnectionToolStripMenuItem, redClientToolStripMenuItem });
-            tsmiNetwork.Name = "tsmiNetwork";
-            tsmiNetwork.Size = new Size(180, 22);
-            tsmiNetwork.Text = "Network";
-            // 
-            // statsToolStripMenuItem
-            // 
-            statsToolStripMenuItem.Name = "statsToolStripMenuItem";
-            statsToolStripMenuItem.Size = new Size(180, 22);
-            statsToolStripMenuItem.Text = "Stats";
-            // 
-            // checkConnectionToolStripMenuItem
-            // 
-            checkConnectionToolStripMenuItem.Name = "checkConnectionToolStripMenuItem";
-            checkConnectionToolStripMenuItem.Size = new Size(180, 22);
-            checkConnectionToolStripMenuItem.Text = "Check connection";
-            // 
-            // tsmiSystem
-            // 
-            tsmiSystem.DropDownItems.AddRange(new ToolStripItem[] { statsToolStripMenuItem1, checkResourcesToolStripMenuItem, lockingPCManipulatorToolStripMenuItem });
-            tsmiSystem.Name = "tsmiSystem";
-            tsmiSystem.Size = new Size(180, 22);
-            tsmiSystem.Text = "System";
-            // 
-            // statsToolStripMenuItem1
-            // 
-            statsToolStripMenuItem1.Name = "statsToolStripMenuItem1";
-            statsToolStripMenuItem1.Size = new Size(202, 22);
-            statsToolStripMenuItem1.Text = "Stats";
-            // 
-            // checkResourcesToolStripMenuItem
-            // 
-            checkResourcesToolStripMenuItem.Name = "checkResourcesToolStripMenuItem";
-            checkResourcesToolStripMenuItem.Size = new Size(202, 22);
-            checkResourcesToolStripMenuItem.Text = "Check resources";
-            // 
-            // lockingPCManipulatorToolStripMenuItem
-            // 
-            lockingPCManipulatorToolStripMenuItem.Name = "lockingPCManipulatorToolStripMenuItem";
-            lockingPCManipulatorToolStripMenuItem.Size = new Size(202, 22);
-            lockingPCManipulatorToolStripMenuItem.Text = "Locking PC manipulator";
-            // 
-            // redClientToolStripMenuItem
-            // 
-            redClientToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { gETToolStripMenuItem, pUTToolStripMenuItem, pOSTToolStripMenuItem });
-            redClientToolStripMenuItem.Name = "redClientToolStripMenuItem";
-            redClientToolStripMenuItem.Size = new Size(180, 22);
-            redClientToolStripMenuItem.Text = "RedClient";
-            // 
-            // gETToolStripMenuItem
-            // 
-            gETToolStripMenuItem.Name = "gETToolStripMenuItem";
-            gETToolStripMenuItem.Size = new Size(180, 22);
-            gETToolStripMenuItem.Text = "GET";
-            // 
-            // pUTToolStripMenuItem
-            // 
-            pUTToolStripMenuItem.Name = "pUTToolStripMenuItem";
-            pUTToolStripMenuItem.Size = new Size(180, 22);
-            pUTToolStripMenuItem.Text = "PUT";
-            // 
-            // pOSTToolStripMenuItem
-            // 
-            pOSTToolStripMenuItem.Name = "pOSTToolStripMenuItem";
-            pOSTToolStripMenuItem.Size = new Size(180, 22);
-            pOSTToolStripMenuItem.Text = "POST";
+            gNUGPLv3ToolStripMenuItem.Name = "gNUGPLv3ToolStripMenuItem";
+            gNUGPLv3ToolStripMenuItem.Size = new Size(180, 22);
+            gNUGPLv3ToolStripMenuItem.Text = "GNU GPLv3";
             // 
             // FormMaster
             // 
@@ -544,8 +552,6 @@
         private ToolStripMenuItem docsToolStripMenuItem;
         private ToolStripMenuItem viewGitHubWikiToolStripMenuItem;
         private ToolStripMenuItem cToolStripMenuItem;
-        private ToolStripMenuItem reportABugToolStripMenuItem;
-        private ToolStripMenuItem requestAFeatureToolStripMenuItem;
         private ToolStripMenuItem rDDevOpsKitToolStripMenuItem;
         private ToolStripMenuItem buildInfoToolStripMenuItem;
         private TabPage tpJsonPrettyPrint;
@@ -561,5 +567,8 @@
         private ToolStripMenuItem gETToolStripMenuItem;
         private ToolStripMenuItem pUTToolStripMenuItem;
         private ToolStripMenuItem pOSTToolStripMenuItem;
+        private ToolStripMenuItem reportABugToolStripMenuItem1;
+        private ToolStripMenuItem requestAFeatureToolStripMenuItem1;
+        private ToolStripMenuItem gNUGPLv3ToolStripMenuItem;
     }
 }
