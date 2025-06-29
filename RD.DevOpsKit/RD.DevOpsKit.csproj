@@ -12,9 +12,9 @@
     <Folder Include="Helpers\" />
     <Folder Include="Controllers\" />
     <Folder Include="Resources\PNGs\Misc\" />
-    <Folder Include="Resources\Title\" />
     <Folder Include="Resources\PNGs\RD_PNG_Buttons\" />
     <Folder Include="Resources\SVGs\Icon\" />
+    <Folder Include="Resources\Title\Home\" />
   </ItemGroup>
 
   <ItemGroup>

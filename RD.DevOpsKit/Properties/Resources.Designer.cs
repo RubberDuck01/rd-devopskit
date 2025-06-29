@@ -63,6 +63,16 @@ namespace RD.DevOpsKit.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap devopskit {
+            get {
+                object obj = ResourceManager.GetObject("devopskit", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap rd_github_click {
             get {
                 object obj = ResourceManager.GetObject("rd_github_click", resourceCulture);
@@ -126,6 +136,36 @@ namespace RD.DevOpsKit.Properties {
         internal static System.Drawing.Bitmap red_star {
             get {
                 object obj = ResourceManager.GetObject("red_star", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rubberducks {
+            get {
+                object obj = ResourceManager.GetObject("rubberducks", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rubberducks_alt {
+            get {
+                object obj = ResourceManager.GetObject("rubberducks_alt", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap welcome {
+            get {
+                object obj = ResourceManager.GetObject("welcome", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
