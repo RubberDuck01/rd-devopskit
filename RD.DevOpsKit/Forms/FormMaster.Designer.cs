@@ -50,8 +50,21 @@
             pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
             tpDiff = new TabPage();
-            tpBase64Coder = new TabPage();
+            rtbRightLines = new RichTextBox();
+            rtbRight = new RichTextBox();
+            rtbLeftLines = new RichTextBox();
+            btnClearAll = new Button();
+            btnCompare = new Button();
+            btnClearRight = new Button();
+            btnClearLeft = new Button();
+            btnAppend = new Button();
+            btnRevert = new Button();
+            lblTxt2 = new Label();
+            lblTxt1 = new Label();
+            lblHeadTextDiff = new Label();
+            rtbLeft = new RichTextBox();
             tpJsonPrettyPrint = new TabPage();
+            tpBase64Coder = new TabPage();
             tpKubernetes = new TabPage();
             lblWatermark = new Label();
             lblVer = new Label();
@@ -86,6 +99,7 @@
             gETToolStripMenuItem = new ToolStripMenuItem();
             pUTToolStripMenuItem = new ToolStripMenuItem();
             pOSTToolStripMenuItem = new ToolStripMenuItem();
+            toolStripMenuItem1 = new ToolStripMenuItem();
             gitHubToolStripMenuItem = new ToolStripMenuItem();
             sourceCodeToolStripMenuItem = new ToolStripMenuItem();
             wikiToolStripMenuItem = new ToolStripMenuItem();
@@ -104,11 +118,11 @@
             buildInfoToolStripMenuItem = new ToolStripMenuItem();
             gNUGPLv3ToolStripMenuItem = new ToolStripMenuItem();
             changelogToolStripMenuItem = new ToolStripMenuItem();
-            toolStripMenuItem1 = new ToolStripMenuItem();
             tabControlMain.SuspendLayout();
             tpMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            tpDiff.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbRedStar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbKoFi).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbGithub).BeginInit();
@@ -120,8 +134,8 @@
             // 
             tabControlMain.Controls.Add(tpMain);
             tabControlMain.Controls.Add(tpDiff);
-            tabControlMain.Controls.Add(tpBase64Coder);
             tabControlMain.Controls.Add(tpJsonPrettyPrint);
+            tabControlMain.Controls.Add(tpBase64Coder);
             tabControlMain.Controls.Add(tpKubernetes);
             tabControlMain.Location = new Point(12, 27);
             tabControlMain.Name = "tabControlMain";
@@ -278,7 +292,7 @@
             // 
             lblLinkKubernetes.AutoSize = true;
             lblLinkKubernetes.Font = new Font("Cascadia Code", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblLinkKubernetes.Location = new Point(612, 297);
+            lblLinkKubernetes.Location = new Point(604, 297);
             lblLinkKubernetes.Name = "lblLinkKubernetes";
             lblLinkKubernetes.Size = new Size(136, 17);
             lblLinkKubernetes.TabIndex = 7;
@@ -289,7 +303,7 @@
             // 
             lblLinkJson.AutoSize = true;
             lblLinkJson.Font = new Font("Cascadia Code", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblLinkJson.Location = new Point(462, 297);
+            lblLinkJson.Location = new Point(392, 297);
             lblLinkJson.Name = "lblLinkJson";
             lblLinkJson.Size = new Size(144, 17);
             lblLinkJson.TabIndex = 6;
@@ -300,7 +314,7 @@
             // 
             lblLinkB64.AutoSize = true;
             lblLinkB64.Font = new Font("Cascadia Code", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblLinkB64.Location = new Point(400, 297);
+            lblLinkB64.Location = new Point(542, 297);
             lblLinkB64.Name = "lblLinkB64";
             lblLinkB64.Size = new Size(56, 17);
             lblLinkB64.TabIndex = 5;
@@ -360,6 +374,19 @@
             // 
             // tpDiff
             // 
+            tpDiff.Controls.Add(rtbRightLines);
+            tpDiff.Controls.Add(rtbRight);
+            tpDiff.Controls.Add(rtbLeftLines);
+            tpDiff.Controls.Add(btnClearAll);
+            tpDiff.Controls.Add(btnCompare);
+            tpDiff.Controls.Add(btnClearRight);
+            tpDiff.Controls.Add(btnClearLeft);
+            tpDiff.Controls.Add(btnAppend);
+            tpDiff.Controls.Add(btnRevert);
+            tpDiff.Controls.Add(lblTxt2);
+            tpDiff.Controls.Add(lblTxt1);
+            tpDiff.Controls.Add(lblHeadTextDiff);
+            tpDiff.Controls.Add(rtbLeft);
             tpDiff.Location = new Point(4, 24);
             tpDiff.Name = "tpDiff";
             tpDiff.Padding = new Padding(3);
@@ -368,14 +395,124 @@
             tpDiff.Text = "Text Diff";
             tpDiff.UseVisualStyleBackColor = true;
             // 
-            // tpBase64Coder
+            // rtbRightLines
             // 
-            tpBase64Coder.Location = new Point(4, 24);
-            tpBase64Coder.Name = "tpBase64Coder";
-            tpBase64Coder.Size = new Size(892, 542);
-            tpBase64Coder.TabIndex = 2;
-            tpBase64Coder.Text = "Base64";
-            tpBase64Coder.UseVisualStyleBackColor = true;
+            rtbRightLines.Location = new Point(481, 63);
+            rtbRightLines.Name = "rtbRightLines";
+            rtbRightLines.ReadOnly = true;
+            rtbRightLines.Size = new Size(30, 368);
+            rtbRightLines.TabIndex = 13;
+            rtbRightLines.Text = "";
+            // 
+            // rtbRight
+            // 
+            rtbRight.Location = new Point(509, 63);
+            rtbRight.Name = "rtbRight";
+            rtbRight.Size = new Size(377, 368);
+            rtbRight.TabIndex = 12;
+            rtbRight.Text = "";
+            // 
+            // rtbLeftLines
+            // 
+            rtbLeftLines.Location = new Point(6, 63);
+            rtbLeftLines.Name = "rtbLeftLines";
+            rtbLeftLines.ReadOnly = true;
+            rtbLeftLines.Size = new Size(30, 368);
+            rtbLeftLines.TabIndex = 11;
+            rtbLeftLines.Text = "";
+            // 
+            // btnClearAll
+            // 
+            btnClearAll.Location = new Point(359, 489);
+            btnClearAll.Name = "btnClearAll";
+            btnClearAll.Size = new Size(171, 26);
+            btnClearAll.TabIndex = 10;
+            btnClearAll.Text = "Clear both inputs";
+            btnClearAll.UseVisualStyleBackColor = true;
+            // 
+            // btnCompare
+            // 
+            btnCompare.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnCompare.Location = new Point(359, 437);
+            btnCompare.Name = "btnCompare";
+            btnCompare.Size = new Size(171, 46);
+            btnCompare.TabIndex = 9;
+            btnCompare.Text = "< Check diff >";
+            btnCompare.UseVisualStyleBackColor = true;
+            // 
+            // btnClearRight
+            // 
+            btnClearRight.Location = new Point(786, 31);
+            btnClearRight.Name = "btnClearRight";
+            btnClearRight.Size = new Size(100, 26);
+            btnClearRight.TabIndex = 8;
+            btnClearRight.Text = "Clear";
+            btnClearRight.UseVisualStyleBackColor = true;
+            // 
+            // btnClearLeft
+            // 
+            btnClearLeft.Location = new Point(311, 31);
+            btnClearLeft.Name = "btnClearLeft";
+            btnClearLeft.Size = new Size(100, 26);
+            btnClearLeft.TabIndex = 7;
+            btnClearLeft.Text = "Clear";
+            btnClearLeft.UseVisualStyleBackColor = true;
+            // 
+            // btnAppend
+            // 
+            btnAppend.Location = new Point(417, 258);
+            btnAppend.Name = "btnAppend";
+            btnAppend.Size = new Size(58, 26);
+            btnAppend.TabIndex = 6;
+            btnAppend.Text = ">>>";
+            btnAppend.UseVisualStyleBackColor = true;
+            // 
+            // btnRevert
+            // 
+            btnRevert.Location = new Point(417, 159);
+            btnRevert.Name = "btnRevert";
+            btnRevert.Size = new Size(58, 26);
+            btnRevert.TabIndex = 5;
+            btnRevert.Text = "<<<";
+            btnRevert.UseVisualStyleBackColor = true;
+            // 
+            // lblTxt2
+            // 
+            lblTxt2.AutoSize = true;
+            lblTxt2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblTxt2.Location = new Point(478, 39);
+            lblTxt2.Name = "lblTxt2";
+            lblTxt2.Size = new Size(61, 21);
+            lblTxt2.TabIndex = 4;
+            lblTxt2.Text = "Text #2:";
+            // 
+            // lblTxt1
+            // 
+            lblTxt1.AutoSize = true;
+            lblTxt1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblTxt1.Location = new Point(3, 39);
+            lblTxt1.Name = "lblTxt1";
+            lblTxt1.Size = new Size(61, 21);
+            lblTxt1.TabIndex = 3;
+            lblTxt1.Text = "Text #1:";
+            // 
+            // lblHeadTextDiff
+            // 
+            lblHeadTextDiff.AutoSize = true;
+            lblHeadTextDiff.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            lblHeadTextDiff.Location = new Point(6, 3);
+            lblHeadTextDiff.Name = "lblHeadTextDiff";
+            lblHeadTextDiff.Size = new Size(285, 25);
+            lblHeadTextDiff.TabIndex = 2;
+            lblHeadTextDiff.Text = "Text Diff: Check text differences";
+            // 
+            // rtbLeft
+            // 
+            rtbLeft.Location = new Point(34, 63);
+            rtbLeft.Name = "rtbLeft";
+            rtbLeft.Size = new Size(377, 368);
+            rtbLeft.TabIndex = 0;
+            rtbLeft.Text = "";
             // 
             // tpJsonPrettyPrint
             // 
@@ -385,6 +522,15 @@
             tpJsonPrettyPrint.TabIndex = 3;
             tpJsonPrettyPrint.Text = "JSON Pretty Print";
             tpJsonPrettyPrint.UseVisualStyleBackColor = true;
+            // 
+            // tpBase64Coder
+            // 
+            tpBase64Coder.Location = new Point(4, 24);
+            tpBase64Coder.Name = "tpBase64Coder";
+            tpBase64Coder.Size = new Size(892, 542);
+            tpBase64Coder.TabIndex = 2;
+            tpBase64Coder.Text = "Base64";
+            tpBase64Coder.UseVisualStyleBackColor = true;
             // 
             // tpKubernetes
             // 
@@ -517,20 +663,20 @@
             // tsmiTextDiff
             // 
             tsmiTextDiff.Name = "tsmiTextDiff";
-            tsmiTextDiff.Size = new Size(180, 22);
+            tsmiTextDiff.Size = new Size(164, 22);
             tsmiTextDiff.Text = "Text Diff";
             // 
             // tsmiJson
             // 
             tsmiJson.Name = "tsmiJson";
-            tsmiJson.Size = new Size(180, 22);
+            tsmiJson.Size = new Size(164, 22);
             tsmiJson.Text = "JSON Pretty Print";
             // 
             // tsmiB64
             // 
             tsmiB64.DropDownItems.AddRange(new ToolStripItem[] { encodeTextToB64ToolStripMenuItem, decodeB64ToTextToolStripMenuItem });
             tsmiB64.Name = "tsmiB64";
-            tsmiB64.Size = new Size(180, 22);
+            tsmiB64.Size = new Size(164, 22);
             tsmiB64.Text = "Base64...";
             // 
             // encodeTextToB64ToolStripMenuItem
@@ -549,7 +695,7 @@
             // 
             tsmiKubernetes.DropDownItems.AddRange(new ToolStripItem[] { generateSimpleYAMLManifestToolStripMenuItem, yAMLManifestVerifierToolStripMenuItem, validateSecretsToolStripMenuItem });
             tsmiKubernetes.Name = "tsmiKubernetes";
-            tsmiKubernetes.Size = new Size(180, 22);
+            tsmiKubernetes.Size = new Size(164, 22);
             tsmiKubernetes.Text = "Kubernetes (K8s)";
             // 
             // generateSimpleYAMLManifestToolStripMenuItem
@@ -574,7 +720,7 @@
             // 
             tsmiSystem.DropDownItems.AddRange(new ToolStripItem[] { statsToolStripMenuItem1, checkResourcesToolStripMenuItem, lockingPCManipulatorToolStripMenuItem });
             tsmiSystem.Name = "tsmiSystem";
-            tsmiSystem.Size = new Size(180, 22);
+            tsmiSystem.Size = new Size(164, 22);
             tsmiSystem.Text = "System";
             // 
             // statsToolStripMenuItem1
@@ -599,45 +745,50 @@
             // 
             tsmiNetwork.DropDownItems.AddRange(new ToolStripItem[] { statsToolStripMenuItem, checkConnectionToolStripMenuItem, redClientToolStripMenuItem });
             tsmiNetwork.Name = "tsmiNetwork";
-            tsmiNetwork.Size = new Size(180, 22);
+            tsmiNetwork.Size = new Size(164, 22);
             tsmiNetwork.Text = "Network";
             // 
             // statsToolStripMenuItem
             // 
             statsToolStripMenuItem.Name = "statsToolStripMenuItem";
-            statsToolStripMenuItem.Size = new Size(180, 22);
+            statsToolStripMenuItem.Size = new Size(170, 22);
             statsToolStripMenuItem.Text = "Stats";
             // 
             // checkConnectionToolStripMenuItem
             // 
             checkConnectionToolStripMenuItem.Name = "checkConnectionToolStripMenuItem";
-            checkConnectionToolStripMenuItem.Size = new Size(180, 22);
+            checkConnectionToolStripMenuItem.Size = new Size(170, 22);
             checkConnectionToolStripMenuItem.Text = "Check connection";
             // 
             // redClientToolStripMenuItem
             // 
             redClientToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { gETToolStripMenuItem, pUTToolStripMenuItem, pOSTToolStripMenuItem, toolStripMenuItem1 });
             redClientToolStripMenuItem.Name = "redClientToolStripMenuItem";
-            redClientToolStripMenuItem.Size = new Size(180, 22);
+            redClientToolStripMenuItem.Size = new Size(170, 22);
             redClientToolStripMenuItem.Text = "RedClient";
             // 
             // gETToolStripMenuItem
             // 
             gETToolStripMenuItem.Name = "gETToolStripMenuItem";
-            gETToolStripMenuItem.Size = new Size(180, 22);
+            gETToolStripMenuItem.Size = new Size(102, 22);
             gETToolStripMenuItem.Text = "GET";
             // 
             // pUTToolStripMenuItem
             // 
             pUTToolStripMenuItem.Name = "pUTToolStripMenuItem";
-            pUTToolStripMenuItem.Size = new Size(180, 22);
+            pUTToolStripMenuItem.Size = new Size(102, 22);
             pUTToolStripMenuItem.Text = "PUT";
             // 
             // pOSTToolStripMenuItem
             // 
             pOSTToolStripMenuItem.Name = "pOSTToolStripMenuItem";
-            pOSTToolStripMenuItem.Size = new Size(180, 22);
+            pOSTToolStripMenuItem.Size = new Size(102, 22);
             pOSTToolStripMenuItem.Text = "POST";
+            // 
+            // toolStripMenuItem1
+            // 
+            toolStripMenuItem1.Name = "toolStripMenuItem1";
+            toolStripMenuItem1.Size = new Size(102, 22);
             // 
             // gitHubToolStripMenuItem
             // 
@@ -753,11 +904,6 @@
             changelogToolStripMenuItem.Size = new Size(147, 22);
             changelogToolStripMenuItem.Text = "Changelog";
             // 
-            // toolStripMenuItem1
-            // 
-            toolStripMenuItem1.Name = "toolStripMenuItem1";
-            toolStripMenuItem1.Size = new Size(180, 22);
-            // 
             // FormMaster
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -780,6 +926,8 @@
             tpMain.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            tpDiff.ResumeLayout(false);
+            tpDiff.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pbRedStar).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbKoFi).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbGithub).EndInit();
@@ -870,5 +1018,18 @@
         private ToolStripMenuItem checkForUpdatesToolStripMenuItem;
         private ToolStripMenuItem changelogToolStripMenuItem;
         private ToolStripMenuItem toolStripMenuItem1;
+        private RichTextBox rtbLeft;
+        private Button btnRevert;
+        private Label lblTxt2;
+        private Label lblTxt1;
+        private Label lblHeadTextDiff;
+        private Button btnClearAll;
+        private Button btnCompare;
+        private Button btnClearRight;
+        private Button btnClearLeft;
+        private Button btnAppend;
+        private RichTextBox rtbLeftLines;
+        private RichTextBox rtbRightLines;
+        private RichTextBox rtbRight;
     }
 }
