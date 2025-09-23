@@ -1,17 +1,18 @@
 ﻿@inherits LayoutComponentBase
 
-<div class="page">
-    <div class="sidebar">
-        <NavMenu />
-    </div>
-
-    <main>
-        <div class="top-row px-4">
-            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
-        </div>
-
-        <article class="content px-4">
-            @Body
-        </article>
+<div class="main-layout">
+    <aside class="sidebar">
+        <h2 class="text-primary">Rubber Duck's DevOpsKit</h2>
+        <nav>
+            <a class="sidebar-link" href="/">Home</a>
+            <a class="sidebar-link" href="/textdiff">Text Diff</a>
+            <a class="sidebar-link" href="/k8sverify">K8s YAML Verifier</a>
+            <a class="sidebar-link" href="/pipeline">Pipeline Creator</a>
+            <a class="sidebar-link" href="/network">Network Info</a>
+            <a class="sidebar-link" href="/dns">DNS Check</a>
+        </nav>
+    </aside>
+    <main class="content">
+        @Body
     </main>
 </div>

@@ -1,5 +1,37 @@
 ﻿@page "/"
+@layout MainLayout
 
-<h1>Hello, world!</h1>
+<div class="form-container">
+    <h1 class="text-primary">🦆 RD DevOpsKit</h1>
+    <h6 class="text-body mb-3">
+        Your all-in-one DevSecOps utility for <span class="text-primary">power users</span>.<br>
+        <span class="text-muted">Diff, verify, generate, and analyze – all from one desktop.</span>
+    </h6>
 
-Welcome to your new app.
+    <div class="alert alert-info mb-4">
+        <b>Welcome!</b> Start by choosing a utility below or from the sidebar. More tools coming soon!
+    </div>
+
+    <div class="d-flex flex-wrap gap-3 mb-4">
+        <button class="btn-vista-premium secondary">Text Diff</button>
+        <button class="btn-vista-premium secondary">K8s YAML Verifier</button>
+        <button class="btn-vista-premium secondary">Azure YAML Pipeline Creator</button>
+        <button class="btn-vista-premium secondary">Network Info</button>
+        <button class="btn-vista-premium secondary">DNS Check</button>
+    </div>
+
+    <hr />
+
+    <div class="text-muted">
+        <small>Made with <span style="color:#00ffff">C#</span>, <span style="color:#4a90e2">Blazor</span>, and lots of ☕.  
+        <br/>Built for Windows, but cross-platform by nature.</small>
+    </div>
+</div>
+
+@code {
+    void NavigateTo(string page) {
+        // Replace with your routing logic when pages are ready
+        // For now, use a stub:
+        // NavigationManager.NavigateTo($"/{page}");
+    }
+}
